@@ -1,5 +1,5 @@
 # HBSIS.Projeto
-Projeto exemplo de em ASP.NET MVC com DDD, AutoMapper , ORM Dapper. e com consumo de métodos de serviços em WEB API MVC Rest
+Projeto exemplo em ASP.NET MVC com DDD, AutoMapper , ORM Dapper. e com consumo de métodos de serviços em WEB API MVC Rest
 
 # Para Testar funcionamento do projeto , siga os seguintes passos:
 
