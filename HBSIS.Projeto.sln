@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBIS.Api", "HBIS.Api\HBIS.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBSIS.Presentation", "HSISBIS.Presentation\HBSIS.Presentation.csproj", "{99181752-6882-4D46-9897-3C2A6F8F60E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts_Database", "Scripts_Database", "{8FD9800A-701C-4045-ABEF-2C0A1B42B054}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts_Database\Database_Create.sql = Scripts_Database\Database_Create.sql
+		Scripts_Database\Table_Create.sql = Scripts_Database\Table_Create.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
