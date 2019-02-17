@@ -1,0 +1,77 @@
+﻿@model HBSIS.Presentation.ViewModels.LivroViewModel
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 class="modal-title">Inclui Livro</h4>
+        </div>
+        <div class="modal-body">
+
+
+            @using (Html.BeginForm("IncluirLivro", "Livraria", FormMethod.Post, new { enctype = "multipart/form-data", role = "form", id = "frmIncluirLivro", @class = "form-horizontal" }))
+            {
+
+                <div class="col-xs-12">
+
+                    <div class="form-group">
+                        Dados do Livro
+                    </div>
+
+
+                    @Html.HiddenFor(model => model.Id, new { @id = "hdId" })
+
+                    <div class="form-group">
+                        <label for="txtISBN" class="form-label">ISBN</label>
+                        @Html.TextBoxFor(model => model.ISBN, new { placeholder = "ISBN", @class = "form-control", @id = "txtISBN" })
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTitulo" class="form-label">Titulo</label>
+                        @Html.TextBoxFor(model => model.Titulo, new { placeholder = "Titulo", @class = "form-control", @id = "txtISBN" })
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDescricao" class="form-label">Descrição</label>
+                        @Html.TextAreaFor(model => model.Descricao, new { placeholder = "Descrição", @class = "form-control", @id = "txtDescricao" })
+                    </div>
+                    <div class="form-group">
+                        <label for="txtAutor" class="form-label">Autor</label>
+                        @Html.TextBoxFor(model => model.Autor, new { placeholder = "Autor", @class = "form-control", @id = "txtAutor" })
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <table>
+                        <tr>
+
+                            <td width="600px;">
+                                &nbsp;
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-primary" name="OK" value="OK">OK</button>
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+
+            }
+
+
+        </div>
+
+    </div>
+
+</div>

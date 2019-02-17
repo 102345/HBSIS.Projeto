@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HBSIS.Presentation.ViewModels.LivroViewModel>
+
+
+<div class="col-xs-12">
+
+    <div>
+        <button type="button" id="btnIncluirLivro" class="btn btn-primary incluirLivro" >
+            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+            <span class="glyphicon-class">Incluir</span>
+        </button>
+    </div>
+
+    <div>
+
+        <table id="tblTituloLivros" class="table table-striped table-hover">
+
+
+            <thead>
+                <tr>
+
+                    <th>@Html.DisplayNameFor(model => model.Id)</th>
+                    <th>@Html.DisplayNameFor(model => model.ISBN)</th>
+                    <th>@Html.DisplayNameFor(model => model.Titulo)</th>
+                    <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+                    <th>@Html.DisplayNameFor(model => model.Autor)</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ISBN)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Autor)
+                        <td>
+                            <button type="button" id="btnEditarLivro" class="btn btn-success editarLivro" data-id="@item.Id">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <span class="glyphicon-class">Editar</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" id="btnExcluirLivro" class="btn btn-danger excluirLivro" data-id="@item.Id">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                <span class="glyphicon-class">Excluir</span>
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                }
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>
+
+
+<div role="dialog" tabindex="-1" id="modExcluirLivro" class="modal fade">
+
+</div>
+
+
+<div role="dialog" tabindex="-1" id="modIncluirLivro" class="modal fade">
+
+</div>
+
+<div role="dialog" tabindex="-1" id="modAtualizarLivro" class="modal fade">
+
+</div>
+
+
+
+
+
+
+
+
+
+
