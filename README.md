@@ -11,7 +11,7 @@ b - Table_create.sql
 3. Abrir o arquivo Web.Config do projeto HBSIS.Presentation e localizar a chave <connectionString> e mudar o parametro 
 connectionString para sua string de conexao local.
   
-4 - Fazer o mesmo procedimento para a chave urlBaseApi e mudar para endereço do local onde roda o projeto HBSIS.Api 
+4 - Fazer o mesmo procedimento para a chave urlBaseApi e mudar para endereço url do local onde roda o projeto HBSIS.Api 
 
 5- Rodar primeiro o projeto HBSIS.api
 
